@@ -1,0 +1,20 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root { 
+    --cor-principal: #9CC9F3;
+    --cor-de-texto-1: #000000;
+    --cor-de-texto-2: #ffffff;
+    --cor-reserva-1: #f389ea;
+    --cor-reserva-2: #e46565;
+    --font-family: 'inter', 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+ 
+h1 {  
+    font-family: var(--font-family);
+    font-size: 2.5rem;
+    color: var(--cor-de-texto-1);
+}
