@@ -6,15 +6,51 @@
 
 :root { 
     --cor-principal: #9CC9F3;
-    --cor-de-texto-1: #000000;
+    --cor-de-texto-1: #191818;
     --cor-de-texto-2: #ffffff;
     --cor-reserva-1: #f389ea;
     --cor-reserva-2: #e46565;
     --font-family: 'inter', 'Segoe UI', Helvetica, Arial, sans-serif;
+    --transicao: all 0.3s ease;
 }
  
-h1 {  
+ body {
     font-family: var(--font-family);
-    font-size: 2.5rem;
+    background-color: var(--cor-de-texto-2);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+
+    border-top: 60px solid var(--cor-principal);
+    box-sizing: border-box;
+ }
+
+ header {
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 40px;
+    height: 60px;
+    align-items: center;
+
+    margin-top: -60px;
+ }
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    padding: 0px 10px;
+}
+
+.nav-links li a {
+    text-decoration: none;
     color: var(--cor-de-texto-1);
+    font-family: var(--font-family);
+    transition: var(--transicao);
+}
+
+.nav-links a:hover {
+    color: var(--cor-de-texto-2);
 }
