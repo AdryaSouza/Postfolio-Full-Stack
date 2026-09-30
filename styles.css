@@ -89,12 +89,14 @@
     border-radius: 50%;
     object-fit: cover;
     display: block;
+    border: 8px solid var(--cor-principal);
+    box-shadow: 0 0 15px rgba(156, 201, 243, 0.5);
 }
 
 #sobre {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     max-width: 1100px;
     margin: 50px auto;
@@ -154,7 +156,7 @@ p.texto {
   background-color: #9CC9F3;
   border: 1px solid #8c9ce4;
   border-radius: 12px;
-  padding: 20px;
+  padding: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -173,12 +175,12 @@ p.texto {
 .foto-placeholder img {
   width: 100% !important;
   height: 100% !important;
-  border-radius: 0% !important;  / Força a continuar retangular /
-  object-fit: cover !important;  / Preenche o espaço perfeitamente /
+  border-radius: 0% !important;
+  object-fit: cover !important;
 }
 
 .card-formacao h3 {
-  font-size: 18px;
+  font-size: 25px;
   margin-bottom: 12px;
   color: #1e1e1e;
 }
@@ -206,8 +208,17 @@ p.texto {
   text-decoration: underline !important;
 }
 
+.card-formacao {
+  transition: transform 0.2s, box-shadow 0.2s !important;
+}
+.card-formacao:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05) !important;
+}
+
+
 #projetos {
-  margin-top: 120px !important; 
+  margin-top: 500px !important; 
   margin-bottom: 120px;
   padding: 0 20px;
 }
@@ -229,7 +240,7 @@ p.texto {
 
 .card-projeto-unico {
   background-color: #9CC9F3;
-  border: 1px solid ##8c9ce4;
+  border: 1px solid #8c9ce4;
   border-radius: 16px;
   padding: 30px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
@@ -285,6 +296,88 @@ p.texto {
 }
 
 .links-do-projeto a:hover {
-  color: rgb(184, 10, 10) !important;
+  color: rgb(10, 184, 184) !important;
   text-decoration: underline !important;
+}
+
+
+#contato {
+  margin-top: 490px !important;
+  margin-bottom: 120px;
+  padding: 0 20px;
+}
+
+.grade-contato {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: center;
+  gap: 40px; 
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.card-contato {
+  flex: 1;
+  background-color: #9CC9F3;
+  border: 1px solid #9CC9F3;
+  border-radius: 16px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #2d3748;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.01);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.icone-contato {
+  width: 140px;
+  height: 140px;
+  background-color: #e2e8f0;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.icone-contato img {
+  width: 70%;
+  height: 70%;
+  object-fit: contain;
+}
+
+.card-contato p {
+  font-size: 16px;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.card-contato:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.card-contato:hover p {
+  color: rgb(255, 255, 255) !important;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 100px;
+  border-top: 1px solid #edf2f7;
+  width: 100%;
+}
+
+footer p {
+  color: #839ec0;
+  font-size: 14px;
+  font-family: var(--font-family);
+}
+
+html {
+  scroll-behavior: smooth; /* Faz a tela deslizar suavemente ao clicar no menu */
 }
